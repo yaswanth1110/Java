@@ -1,0 +1,10 @@
+In Java, abstraction is the concept of hiding the implementation details and showing only the essential features of an object. 
+It can be achieved using abstract classes and interfaces.
+
+Abstract Class (Animal):
+>Cannot be instantiated.
+>Contains an abstract method sound() (no body).
+>Contains a regular method sleep() with an implementation.
+
+Concrete Subclasses (Dog and Cat):
+>These classes must provide an implementation for the abstract method sound().
