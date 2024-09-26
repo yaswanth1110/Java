@@ -1,0 +1,42 @@
+Exception Handling in Java
+
+1. Exception:
+
+An exception is an event that disrupts the normal flow of a program's execution. 
+In Java, exceptions can be categorized as checked and unchecked exceptions. 
+Checked exceptions must be either caught or declared in the method signature.
+
+2. Custom Exception:
+
+A custom exception is a user-defined exception that extends the Exception class. 
+It allows programmers to create specific exception types that are relevant to their application. 
+In this code, NuvvuChinnaPillavadivi is a custom exception that indicates when a user’s age is insufficient for voting.
+
+3. try Block:
+
+The try block is used to enclose code that might throw an exception. 
+If an exception occurs within the try block, the control is transferred to the corresponding catch block.
+
+4. catch Block:
+
+The catch block is used to handle exceptions that arise from the try block. 
+You can have multiple catch blocks to handle different types of exceptions. 
+In this code, one catch block handles the custom exception, while another handles any generic exceptions.
+
+5. finally Block:
+
+The finally block is optional and always executes after the try and catch blocks, regardless of whether an exception was thrown or caught. 
+It is typically used for cleanup activities, such as closing resources (like file streams or database connections). 
+In this case, it ensures the Scanner is closed.
+
+6. throw:
+
+Used to throw an exception explicitly.
+Can be used anywhere in the code, inside methods, constructors, etc.
+Affects the flow of execution immediately by transferring control to the nearest catch block.
+
+7. throws:
+
+Used in method declarations to indicate that the method can throw exceptions.
+Signals to the caller that they should handle the specified exceptions.
+Does not affect the flow of execution directly but requires handling by the method caller.
