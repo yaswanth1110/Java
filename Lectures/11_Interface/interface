@@ -1,0 +1,15 @@
+All methods are implicitly public and abstract (except for default and static methods).
+All fields are public, static, and final (i.e., constants).
+Interfaces cannot have constructors or maintain instance state (no instance variables).
+A class can implement multiple interfaces, enabling multiple inheritance of method contracts.
+You cannot instantiate an interface directly (i.e., new InterfaceName() is not allowed).
+
+Abstract Method:
+sound() is an abstract method that must be implemented by the class that implements the interface.
+Default Method:
+The sleep() method has a default implementation. Classes implementing the interface can either use this default implementation or override it.
+Static Method:
+staticMethod() belongs to the interface and is called using the interface name (Animal.staticMethod()).
+
+An interface can be implemented by multiple classes.
+A class can implement multiple interfaces, enabling a class to inherit behaviors from more than one source.
