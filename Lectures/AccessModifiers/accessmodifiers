@@ -1,0 +1,36 @@
+Access Modifiers in Java
+Access modifiers define the visibility of members such as methods, constructors, attributes, and classes. 
+Java provides four types of access modifiers: default, private, protected, and public.
+
+1. Default (Package-Private)
+
+Visibility: Accessible only within the same package.
+Usage: If no access modifier is specified, the member has default (package-private) access.
+Allowed for: Class, constructor, method, and attribute.
+Important Note: Default access provides the least visibility, suitable for members that should not be exposed outside the package but are accessible within.
+
+
+2. Private
+
+Visibility: Accessible only within the same class.
+Usage: Members marked as private cannot be accessed outside the class where they are defined.
+Allowed for: Constructor, method, and attribute.
+Not Allowed for: Classes cannot be marked private (only nested classes can be private).
+Modifiers Allowed on Classes: public, abstract, final.
+Important Note: Use private for encapsulation, ensuring members are not directly accessible by external classes. This promotes better design practices like using getters and setters.
+
+
+3. Protected
+
+Visibility:Accessible within the same package.
+Accessible outside the package, but only through inheritance (i.e., in child classes).
+Usage: Protected members are often used when you want to allow subclassing but prevent direct access from non-subclasses outside the package.
+Allowed for: Constructor, method, and attribute.
+Important Note: protected strikes a balance between private and public, enabling some access control in inheritance hierarchies while keeping members restricted from non-subclass access.
+
+
+4. Public
+Visibility: Accessible from any class, both within and outside the package.
+Usage: Public members are open to all, regardless of package or class boundaries.
+Allowed for: Class, constructor, method, and attribute.
+Important Note: It's generally recommended not to mark attributes as public unless absolutely necessary (e.g., for constant values), as it breaks encapsulation.
