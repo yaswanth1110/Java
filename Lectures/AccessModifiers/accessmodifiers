@@ -34,3 +34,83 @@ Visibility: Accessible from any class, both within and outside the package.
 Usage: Public members are open to all, regardless of package or class boundaries.
 Allowed for: Class, constructor, method, and attribute.
 Important Note: It's generally recommended not to mark attributes as public unless absolutely necessary (e.g., for constant values), as it breaks encapsulation.
+
+
+// Class with default (package-private) access modifier
+class DefaultClass {
+    // Default attribute (no modifier specified)
+    String defaultAttribute = "I am a default attribute";
+
+    // Default method (no modifier specified)
+    void defaultMethod() {
+        System.out.println("I am a default method, accessible within the package.");
+    }
+}
+
+// Public class that can be accessed from anywhere
+public class AccessModifiersExample {
+    
+    // Private attribute, accessible only within this class
+    private String privateAttribute = "I am a private attribute";
+    
+    // Protected attribute, accessible within the package and through inheritance
+    protected String protectedAttribute = "I am a protected attribute";
+    
+    // Public attribute, accessible from anywhere (use with caution)
+    public String publicAttribute = "I am a public attribute";
+    
+    // Private method, accessible only within this class
+    private void privateMethod() {
+        System.out.println("I am a private method, accessible only within this class.");
+    }
+    
+    // Protected method, accessible within the package and subclasses
+    protected void protectedMethod() {
+        System.out.println("I am a protected method, accessible within the package and via inheritance.");
+    }
+
+    // Public method, accessible from anywhere
+    public void publicMethod() {
+        System.out.println("I am a public method, accessible from anywhere.");
+    }
+
+    // Main method to test the access modifiers
+    public static void main(String[] args) {
+        AccessModifiersExample example = new AccessModifiersExample();
+
+        // Accessing attributes and methods within the same class
+        System.out.println(example.privateAttribute); // Allowed (within the same class)
+        System.out.println(example.protectedAttribute); // Allowed (within the same class)
+        System.out.println(example.publicAttribute); // Allowed (within the same class)
+        
+        example.privateMethod(); // Allowed (within the same class)
+        example.protectedMethod(); // Allowed (within the same class)
+        example.publicMethod(); // Allowed (within the same class)
+
+        // Creating an object of DefaultClass
+        DefaultClass defaultClass = new DefaultClass();
+        System.out.println(defaultClass.defaultAttribute); // Allowed (within the same package)
+        defaultClass.defaultMethod(); // Allowed (within the same package)
+
+        // Where each modifier is not accessible:
+        // Note: The following code represents where members would not be accessible if accessed from other classes.
+
+        // Example from a different class within the same package:
+        // - privateAttribute and privateMethod would NOT be accessible.
+        // - defaultAttribute and defaultMethod would be accessible (same package).
+        // - protectedAttribute and protectedMethod would be accessible (same package).
+        // - publicAttribute and publicMethod would be accessible.
+
+        // Example from a different class outside the package:
+        // - privateAttribute and privateMethod would NOT be accessible (restricted to the class).
+        // - defaultAttribute and defaultMethod would NOT be accessible (restricted to the package).
+        // - protectedAttribute and protectedMethod would be accessible ONLY through inheritance (not directly).
+        // - publicAttribute and publicMethod would be accessible.
+
+        // Example from a child class in a different package:
+        // - privateAttribute and privateMethod would NOT be accessible.
+        // - defaultAttribute and defaultMethod would NOT be accessible (not visible outside the package).
+        // - protectedAttribute and protectedMethod would be accessible through inheritance (but not directly).
+        // - publicAttribute and publicMethod would be accessible.
+    }
+}
