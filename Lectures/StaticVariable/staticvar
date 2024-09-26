@@ -1,0 +1,14 @@
+In Java, static variables are class-level variables shared by all instances of a class. 
+A static variable is declared with the static keyword and belongs to the class rather than to any particular object. 
+This means that if one instance of the class modifies a static variable, the change is reflected across all instances.
+
+Here’s how static variables work:
+
+Key Points:
+Static variables are shared across all instances: All instances of a class share the same static variable. If one instance modifies it, the change will be visible to all other instances.
+
+Accessing static variables:
+
+They can be accessed directly by the class name (e.g., ClassName.variable).
+They can also be accessed via an instance, but this is discouraged as it can be misleading.
+Modifying static variables: Any modification to a static variable will affect all instances of the class.
