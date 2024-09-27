@@ -1,0 +1,24 @@
+Non-Access Modifiers
+Non-access modifiers define the state and behavior of an object. 
+The main non-access modifiers are:
+
+1. abstract
+Definition: Indicates the incompleteness of a class.
+Usage: Can be applied to classes and methods.
+
+2. static
+Memory Allocation: Static memory allocation occurs only once and is not part of the object memory.
+Access:Static memory can be accessed without creating an object; it can be accessed using the class name.
+All non-static methods can be accessed through an object.
+Static methods and static variables can be accessed through the class; no object is needed.
+
+3. final
+Usage: Can be applied at the class, attribute, and method levels.
+At Class Level:
+Prevents the class from being extended.
+Inheriting from a final class will raise an error from the Java Runtime Environment (JRE).
+At Method Level:
+Prevents method overriding.
+At Attribute Level:
+Should define a constant.
+Constants should be assigned only once and cannot be reassigned a second time.
