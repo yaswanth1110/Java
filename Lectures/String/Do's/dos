@@ -1,0 +1,33 @@
+public class StringExample {
+    public static void main(String[] args) {
+        // 1. Create a String
+        String str1 = "Hello, World!";
+        String str2 = new String("Java Programming");
+
+        // 2. Concatenate Strings
+        String str3 = str1 + " " + str2;
+        System.out.println("Concatenated String: " + str3);
+
+        // 3. Access Characters
+        char firstChar = str1.charAt(0);
+        System.out.println("First Character: " + firstChar);
+
+        // 4. Get String Length
+        int length = str1.length();
+        System.out.println("Length of str1: " + length);
+
+        // 5. Convert to Uppercase/Lowercase
+        String upperStr = str1.toUpperCase();
+        String lowerStr = str2.toLowerCase();
+        System.out.println("Uppercase: " + upperStr);
+        System.out.println("Lowercase: " + lowerStr);
+
+        // 6. Check Equality
+        boolean isEqual = str1.equals("Hello, World!");
+        System.out.println("Strings are equal: " + isEqual);
+
+        // 7. Substring
+        String subStr = str2.substring(5, 16);
+        System.out.println("Substring: " + subStr);
+    }
+}
