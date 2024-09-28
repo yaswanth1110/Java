@@ -1,0 +1,16 @@
+Java String 
+
+Package: java.lang
+
+Definition: A String is a group of characters represented in double quotes ("").
+
+Characteristics:
+String is a final class, meaning it cannot be extended.
+String is an immutable class, which means once created, its value cannot be changed. 
+This immutability ensures that strings remain constant and helps in memory optimization.
+
+Garbage Collector:
+The Garbage Collector is a component of the JRE (Java Runtime Environment) responsible for scanning memory at different intervals and destroying objects that no longer have references attached to them.
+
+String Constant Pool:
+A special memory region where Java stores String literals for efficient memory management.
