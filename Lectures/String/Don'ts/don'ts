@@ -1,0 +1,16 @@
+public class StringImmutableExample {
+    public static void main(String[] args) {
+        // Create a String
+        String str1 = "Hello, World!";
+
+        // 1. Modify a String (This will cause a compilation error)
+        // str1[0] = 'h'; // Uncommenting this line will result in an error
+
+        // 2. Extend the String Class (This will cause a compilation error)
+        // public class MyString extends String {} // Uncommenting this line will result in an error
+
+        // 3. Use Mutable Operations
+        String newStr = str1.replace('H', 'h'); // This creates a new string
+        System.out.println("New String after replacement: " + newStr); // Original str1 remains unchanged
+    }
+}
