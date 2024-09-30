@@ -1,0 +1,36 @@
+About StringBuffer
+Introduction to StringBuffer:
+
+StringBuffer is a class in Java that provides a mutable sequence of characters. 
+Unlike String, which is immutable, StringBuffer can be modified after creation without creating new objects. 
+This makes it more efficient when dealing with many string manipulations like appending, inserting, or deleting characters.
+
+
+Buffer in StringBuffer:
+
+The "buffer" refers to an internal character array that holds the sequence of characters. 
+The buffer is dynamically resized when the string grows beyond its initial capacity.
+The initial capacity of the buffer can be specified when creating the StringBuffer object. 
+If no capacity is provided, the default is 16 characters.
+
+
+Dynamic Growth of Buffer:
+
+If more characters are appended than the current capacity can hold, the buffer is resized to accommodate the additional characters. 
+This avoids creating a new object for each modification, unlike String.
+
+
+StringBuffer vs String:
+
+String: Immutable, meaning every modification creates a new object.
+StringBuffer: Mutable, meaning modifications happen in the same object, which results in more efficient performance when performing repeated modifications.
+
+
+Common Methods of StringBuffer:
+
+append(): Adds new characters to the end of the string buffer.
+insert(): Inserts characters at a specified index.
+delete(): Removes characters from the buffer.
+reverse(): Reverses the order of characters in the buffer.
+capacity(): Returns the current capacity of the buffer.
+charAt(): Returns the character at a specified index.
